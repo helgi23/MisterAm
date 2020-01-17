@@ -10,12 +10,13 @@ public class Order {
         System.setProperty("webdriver.chrome.driver", "D:\\EclipseWorkspace\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
+
         driver.get("https://misteram.com.ua/chernigov/oxy");
 
         driver.findElement(By.xpath("//div[@class='card-wrapper']//div[1]//div[4]//div[2]//div[2]//i[1]")).click();
+        Thread.sleep(1000);
+
         driver.findElement(By.xpath("//div[@class='meals-btn']//a//button")).click();
-
-
         driver.findElement(By.xpath("//div[@class='button-order']//span")).click();
         Thread.sleep(3000L);
 
@@ -23,7 +24,7 @@ public class Order {
         driver.findElement(By.name("house")).sendKeys("23");
         driver.findElement(By.name("flat")).sendKeys("2");
         driver.findElement(By.name("name")).sendKeys("Ivanov Ivan");
-        driver.findElement(By.name("phone")).sendKeys("38098464413");
+        driver.findElement(By.name("phone")).sendKeys("380984644136");
         driver.findElement(By.id("submitCheckForm")).click();
 
     }
