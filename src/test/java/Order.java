@@ -26,6 +26,7 @@ public class Order {
         driver.findElement(By.name("phone")).sendKeys("38098464413");
         driver.findElement(By.id("submitCheckForm")).click();
 
+        driver.quit();
 
     }
 }
