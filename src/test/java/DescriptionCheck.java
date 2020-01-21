@@ -17,6 +17,5 @@ public class DescriptionCheck {
 
         driver.findElement(By.xpath("//body/div[@class='container ng-scope']/section[@class='clear clear-saas']/div[@class='content']" +
                 "/div[@class='card-wrapper']/div[@class='card-holder clearfix']/div[@class='card-tiny']/div[3]/div[3]/div[2]/span[1]")).click();
-        driver.close();
     }
 }
