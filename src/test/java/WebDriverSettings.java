@@ -1,5 +1,7 @@
+import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.junit.Before;
 
@@ -11,7 +13,15 @@ public class WebDriverSettings {
     public void setUp() {
 
         System.setProperty("webdriver.chrome.driver","D:\\EclipseWorkspace\\chromedriver.exe");
-        driver =new ChromeDriver();
+        System.out.println("Test start");
+        driver = new ChromeDriver();
 }
+
+    @AfterClass
+    public void closeUp() throws InterruptedException {
+        Thread.sleep(5000L);
+        System.out.println("Test close");
+        driver.quit();
+    }
 
 }

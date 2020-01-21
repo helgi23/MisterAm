@@ -1,7 +1,8 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+
 
 public class DescriptionCheck extends WebDriverSettings{
 
@@ -13,9 +14,9 @@ public class DescriptionCheck extends WebDriverSettings{
         driver.get("https://misteram.com.ua/chernigov/oxy");
         driver.findElement(By.xpath("//div[@class='name fade two-lines']//span[@class='ui border-underline dashed ng-binding'][contains(text(),'(40')]")).click();
 
-        driver.findElement(By.xpath("//span[@class='ui border-underline dashed ng-binding'][contains(text(),'\" (40')]")).click();
+        assertEquals("Роли Філадельфія, Каліфорнія, Аляска та Ніагара з лососем та Лас Веган. До кожного ролу додаються палички, соєвий соус, імбир та васабі.",
+                driver.findElement(By.xpath("//div[@class='desc ng-binding']")).getText());
 
-        driver.findElement(By.xpath("//body/div[@class='container ng-scope']/section[@class='clear clear-saas']/div[@class='content']" +
-                "/div[@class='card-wrapper']/div[@class='card-holder clearfix']/div[@class='card-tiny']/div[3]/div[3]/div[2]/span[1]")).click();
     }
+
 }
