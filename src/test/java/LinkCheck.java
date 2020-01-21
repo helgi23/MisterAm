@@ -8,12 +8,11 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.Set;
 
-public class LinkCheck {
+public class LinkCheck extends WebDriverSettings{
     @Test
     public void lincCheck() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "D:\\EclipseWorkspace\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.get("https://misteram.com.ua/chernigov/oxy");
 

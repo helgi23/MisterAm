@@ -3,11 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class DescriptionCheck {
+public class DescriptionCheck extends WebDriverSettings{
+
     @Test
     public void firstClass () throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:\\EclipseWorkspace\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         Thread.sleep(2000);
         driver.get("https://misteram.com.ua/chernigov/oxy");
