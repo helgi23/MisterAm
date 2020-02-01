@@ -16,7 +16,6 @@ public class DescriptionCheck extends WebDriverSettings{
 
         assertEquals("Роли Філадельфія, Каліфорнія, Аляска та Ніагара з лососем та Лас Веган. До кожного ролу додаються палички, соєвий соус, імбир та васабі.",
                 driver.findElement(By.xpath("//div[@class='desc ng-binding']")).getText());
-
-    }
+        }
 
 }
